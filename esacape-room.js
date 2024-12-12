@@ -1,10 +1,11 @@
+
 let direccion = prompt("Estas en una casa antigua donde prácticamente no se ve nada pero puedes notar dos puertas, ¿en qué habitación quieres entrar, izquierda o derecha?");
 
 let habitaciónIzquierda = ""; 
 
 if (direccion.toLowerCase() === "izquierda") {
-    alert("Has entrado en la habitación principal");
-    habitaciónIzquierda = prompt("¿Qué objeto quieres coger? (Destornillador, Álbum de Fotos, Móvil, Walkman, Cuchillo, Linterna)");
+    alert("Has entrado en la habitación principal, echa un vistazo a tus alrededores.");
+    habitaciónIzquierda = prompt("Encuentra una mesa con un montón de cosas. ¿Qué objeto quieres coger? (Destornillador, Álbum de Fotos, Móvil, Walkman, Cuchillo, Linterna)");
 } else {
     alert("Esta puerta está cerrada, inténtalo con la otra");
 }
@@ -25,7 +26,7 @@ if (habitaciónIzquierda) {
             objetoErroneo();
             break;
         case "walkman":
-            alert("No tiene nada que reproducir");
+            alert("Creo que mi padre me ha hablado alguna vez de estos aparatos, pero parece que no tiene nada que reproducir");
             objetoErroneo();
             break;
         case "cuchillo":
@@ -47,9 +48,9 @@ function manejarLinterna() {
 
     if (proseguir.toLowerCase() === "si") {
         alert("Sigues caminando por la casa y encuentras una nueva habitación. ¡La aventura continúa!");
-        // Aquí podrías agregar más lógica para que avance el jugador a otra parte del juego.
+        proseguir();
     } else {
-        alert("Te quedas en la habitación a investigar más, ¿Qué quieres inspeccionar?");
+        prompt("Te quedas en la habitación a investigar más, ¿Qué quieres inspeccionar?");
     }
 }
 
@@ -61,6 +62,17 @@ function objetoErroneo() {
         alert("Sigues caminando por la casa y encuentras una nueva habitación. ¡La aventura continúa!");
         // Aquí podrías agregar más lógica para que avance el jugador a otra parte del juego.
     } else {
-        alert("Te quedas en la habitación a investigar más, ¿Qué quieres inspeccionar?");
+        prompt("Te quedas en la habitación a investigar más, ¿Qué quieres inspeccionar?");
     }
 }
+
+// Función que maneja la logica cuando selecciona el chuchillo
+function objetoMortal() {
+    alert("FIN DEL JUEGO")
+}
+
+//Funcion que maneja la logica de proseguir
+function proseguir(){
+
+}
+
