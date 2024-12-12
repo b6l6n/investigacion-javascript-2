@@ -18,13 +18,12 @@
 <script>
 function verificarEdad(edad) {
     if (edad < 18) {
-     throw new error("Debes ser mayor de 18 años");
+     throw new Error("Debes ser mayor de 18 años");
     }
     alert("Acceso permitido.");
    }
    
    document.getElementById('formulario').addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita el envío del formulario
 
       const edad = parseInt(document.getElementById('edad').value);
       try {
@@ -34,7 +33,6 @@ function verificarEdad(edad) {
         alert(error.message); // "Debes ser mayor de 18 años"
         alert(error.stack); //la pila en la que está el código
         alert(error); // el error completo "Error. Debes ser mayor de 18 años"
-
       }
     });
 
