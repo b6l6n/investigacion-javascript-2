@@ -1,0 +1,56 @@
+body {
+    font-family: 'Creepster', sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color:red;
+    font-size: 2rem;
+}
+
+#cuadro{
+    width: 10rem;
+    height: 15rem;
+    background-image: url(zombie.gif); 
+    background-size: cover;
+    position: absolute;
+    display: none; /* Oculto hasta que aparezca */
+    cursor: pointer;
+}
+
+#final{
+    width: 100rem;
+    height: 100rem;
+    background-image: url(scare.jpg); 
+    background-size: cover;
+    position: fixed; /* Fijo en relación con la ventana */
+    display: none; /* Oculto hasta que aparezca */
+    top: 50%; /* Centrar verticalmente */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translate(-50%, -50%); /* Ajustar para centrar */
+    z-index: 1; 
+}
+
+#goodfinal{
+    width: 100rem;
+    height: 100rem;
+    background-image: url(goodjob.jpg); 
+    background-size: cover;
+    position: fixed; /* Fijo en relación con la ventana */
+    display: none; /* Oculto hasta que aparezca */
+    top: 50%; /* Centrar verticalmente */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translate(-50%, -50%); /* Ajustar para centrar */
+    z-index: 1; 
+}
+
+
+#tiempo{
+    font-size: 3rem;
+    margin: 10px;
+}
+#puntuaje{
+    font-size: 2rem;
+    margin: 10px;
+}
