@@ -15,7 +15,7 @@ function mostrarCuadro() {
     cuadro.style.display = 'block'; // Mostrar el cuadro
 }
 
-// Llama a `mostrarCuadro` inicialmente
+// Llama a `mostrarCuadro` inicialmente, sino tardaria un poco mas en aparecer
 mostrarCuadro();
 
 // Evento para manejar clic en el cuadro
