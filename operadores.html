@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="operadores.css">
+
+</head>
+
+<body>
+    <h1>OPERADORES</h1>
+
+<main>
+
+<section>
+    <h2>¿Que es un operadore?</h2>
+    <p>Un operador es un símbolo especial o palabra clave que se utiliza en<br>
+         programación para realizar operaciones sobre valores o variables. En <br>
+         JavaScript, los operadores se utilizan para asignar valores, comparar <br>
+         valores, y realizar operaciones aritméticas, lógicas y bitwise.</p>
+
+    <h2>Lista de Operadores de Comparación:</h2>
+    <ul>
+     <li>1.== (Igual )</li>
+     <li>2.=== (Igual estrictamente )</li>
+     <li>3.!= (No igual )</li>
+     <li>4.!== (No igual estrictamente )</li>
+    </ul>
+        <!--igual-->
+    <h2>1.== (Igual )</h2>
+    <p><b>Definicion: </b>El operador == se utiliza para comparar solo los valores de dos elementos.<br>
+       Sin embargo, no le importa el tipo de esos elementos (si son números, cadenas,<br>
+       booleanos, etc.). Este operador solo verifica si los valores son los mismos,<br>
+       aunque sean de tipos diferentes. Si son iguales, devuelve true, y si no, devuelve false.</p>
+
+    <p><b>EJEMPLO:</b></p>
+    
+    <button id="btnIgual">console.log(10 == "10")</button>
+
+    <div id="resultadoIgual" class="resultado"></div>
+        
+
+        <!--igual estrictamente-->
+        <h2>2.=== (Igual estrictamente )</h2>
+        <p><b>Definicion: </b>El operador === es más estricto que ==. Este operador compara tanto el valor como el<br>
+           tipo de los elementos. Esto significa que, para que dos elementos sean iguales con ===, <br>
+           su valor y su tipo deben coincidir exactamente.</p>
+
+           <p><b>EJEMPLO:</b></p>
+
+           <button id="btnEstricto">console.log(30 === "30")</button>
+           <div id="resultadoEstricto" class="resultado"></div>
+   
+        <!--no igual-->
+    <h2>3.!= (No igual )</h2>
+    <p><b>Definicion: </b>El operador != se usa para verificar si dos valores no son iguales. Al igual que ==, <br>
+       != solo compara los valores y no le importa el tipo de esos valores. Si los valores son <br>
+       diferentes, devuelve true; si son iguales, devuelve false.</p>
+
+       <p><b>EJEMPLO:</b></p>
+      
+       <button id="btnNoIgual">console.log(5 != 10)</button>
+       <div id="resultadoNoIgual" class="resultado"></div>
+
+      <!--no igual estrictamente-->
+    <h2>4.!== (No igual estrictamente )</h2>
+    <p><b>Definicion: </b>El operador !== es el opuesto de ===. Este operador compara tanto el valor como el tipo de los<br>
+      elementos, y devuelve true si alguno de los dos (valor o tipo) es diferente. Si tanto el valor<br>
+      como el tipo son iguales, devuelve false.</p>
+
+      <p><b>EJEMPLO:</b></p>
+      <button id="btnNoIgualEstricto">console.log(7 !== "20")</button>
+      <div id="resultadoNoIgualEstricto" class="resultado"></div>
+
+<!-- JavaScript -->
+<script>
+    // Igual
+    document.getElementById('btnIgual').addEventListener('click', function() {
+      const result = 10 == "10"; // true
+      document.getElementById('resultadoIgual').textContent = `Resultado: 10 == "10" → ${result}`;
+      console.log(result);
+    });
+
+    // Igual estrictamente
+    document.getElementById('btnEstricto').addEventListener('click', function() {
+      const result = 30 === "30"; // false
+      document.getElementById('resultadoEstricto').textContent = `Resultado: 30 === "30" → ${result}`;
+      console.log(result);
+    });
+
+    // No igual
+    document.getElementById('btnNoIgual').addEventListener('click', function() {
+      const result = 5 != 10; // true
+      document.getElementById('resultadoNoIgual').textContent = `Resultado: 5 != 10 → ${result}`;
+      console.log(result);
+    });
+
+    // No igual estrictamente
+    document.getElementById('btnNoIgualEstricto').addEventListener('click', function() {
+      const result = 7 !== "20"; // true
+      document.getElementById('resultadoNoIgualEstricto').textContent = `Resultado: 7 !== "20" → ${result}`;
+      console.log(result);
+    });
+  </script>
+</section>
+            <!--LOGICS OPERATERS-->
+<section>
+    <h1>OPERADORES LOGICOS</h1>
+
+   <p> Los operadores lógicos se utilizan en programación para combinar o manipular valores booleanos </p>
+   <p>Los operadores principales son:</p>
+    <ul>
+        <li>AND &&</li>
+        <li>OR ||</li>
+        <li>NOT</li>
+    </ul>
+
+
+    <!--AND&&-->
+
+    <h2>1.AND &&</h2>
+    <p><b>Definicion: </b>El operador AND (&&) devuelve true solo si ambas condiciones son verdaderas.<br>
+       En cualquier otro caso, el resultado será false.</p>
+
+       <p><b>EJEMPLO:</b></p>
+       <button id="btnAnd">Check AND (true && false)</button>
+       <div id="resultadoAnd" class="resultado"></div>
+
+    <!--OR  ||-->
+    <h2>2.OR ||</h2>
+    <p><b>Definicion: </b>El operador OR (||) devuelve true si al menos una de las condiciones es verdadera. Solo <br>
+        devuelve false cuando ambas condiciones son falsas.</p>
+
+        <p><b>EJEMPLO:</b></p>
+        <button id="btnOr">Check OR (true || false)</button>
+        <div id="resultadoOr" class="resultado"></div>
+
+    <!--NOT !-->
+    <h2>3. NOT !</h2>
+    <p><b>Definicion: </b>El operador NOT (!) se usa para invertir el valor de una condición. Si es true, se<br>
+         convierte en false, y si es false, se convierte en true.</p>
+
+         <p><b>EJEMPLO:</b></p>
+
+         <button id="btnNot">Check NOT (!true)</button>
+         <div id="resultadoNot" class="resultado"></div>
+
+</section>
+<!--javascript-->
+<script>
+    // AND example
+    document.getElementById('btnAnd').addEventListener('click', function() {
+      const result = true && false; // false
+      document.getElementById('resultadoAnd').textContent = `Resultado: true && false → ${result}`;
+      console.log(result);
+    });
+
+    // OR example
+    document.getElementById('btnOr').addEventListener('click', function() {
+      const result = true || false; // true
+      document.getElementById('resultadoOr').textContent = `Resultado: true || false → ${result}`;
+      console.log(result);
+    });
+
+    // NOT example
+    document.getElementById('btnNot').addEventListener('click', function() {
+      const result = !true; // false
+      document.getElementById('resultadoNot').textContent = `Resultado: !true → ${result}`;
+      console.log(result);
+    });
+  </script>
+
+<script src="operadores.js">
+  
+</script>
+</main>    
+</body>
+</html>
