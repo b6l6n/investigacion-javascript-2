@@ -27,7 +27,7 @@ cuadro.addEventListener('click', function () {
 
 // Configurar aparición periódica del cuadro
 var intervalCuadro = setInterval(function () {
-    if (tiempoRestante >= -1) {
+    if (tiempoRestante >= 0) {
         mostrarCuadro();
     } else {
         clearInterval(intervalCuadro);
