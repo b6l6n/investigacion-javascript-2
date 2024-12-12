@@ -1,0 +1,38 @@
+*
+  body {
+    font-family: Arial, sans-serif;
+    margin: 100px;
+    line-height: 1.6;
+   background-color:lightpink;
+    
+}
+
+section {
+    margin-bottom: 30px;
+}
+h1{
+    text-align: center;
+    background-color: gray;
+    font-size: 3rem; 
+    border-radius: 20rem;   
+}
+
+h2 {
+    color: black;
+    background-color:gray;
+    font-size: 2rem;
+    text-align: center;
+    border-radius: 20rem;
+}
+
+button {
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+      
+      
+.resultado {
+        margin-top: 10px;
+        font-size: 18px;
+        
+      }
