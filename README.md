@@ -48,16 +48,16 @@ This extended effort provides a solid foundation for more advanced exploration i
 <h2>🧑‍🤝‍🧑THE TEAM</h2>
 
 **Scrum Master**
-[Belen]()
+[Belen](https://github.com/b6l6n)
 
 **Product Owner**
-[Igor]()
+[Igor](https://github.com/igoribon)
 
 **First Programmer**
 [Thais](https://github.com/intxaurtietadev)
 
 **Second Programmer**
-[Azalfa]()
+[Azalfa](https://github.com/zille5)
 
 **Third Programmer**
 [Nay](https://github.com/naytxi)
