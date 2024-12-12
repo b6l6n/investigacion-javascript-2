@@ -17,15 +17,26 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
 }
 
 .button {
     padding: 20px 40px; 
     font-size: 3rem;
     background-color: palevioletred;
-    margin-bottom: 1rem;
+    margin-bottom: 1rem; 
 
 }
+
+.dropdown {
+    font-size: 3rem;
+    background-color: palevioletred;
+    margin-bottom: 1rem;
+    text-align: center;
+    padding-bottom: 1rem; 
+
+}
+
 .button2 {
     padding: 20px 40px; 
     font-size: 3rem;
@@ -33,6 +44,7 @@
     margin-bottom: 1rem;
 
 }
+
 .button3 {
     padding: 20px 40px; 
     font-size: 3rem;
@@ -40,6 +52,7 @@
     margin-bottom: 1rem;
 
 }
+
 .button4 {
     padding: 20px 40px; 
     font-size: 3rem;
@@ -47,6 +60,7 @@
     margin-bottom: 1rem;
 
 }
+
 .button5 {
     padding: 20px 40px; 
     font-size: 3rem;
@@ -54,17 +68,3 @@
     margin-bottom: 1rem;
 
 }
-
-
-.red-text {
-    color:chocolate;
-    font-size: 3rem;
-  }
-
-  .blue-text {
-    color:chartreuse;
-    font-size: 3rem;
-  }
-  a{
-    font-style: none;
-  }
