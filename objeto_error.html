@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Ingresa tu edad:</h1>
+<form id="formulario">
+    <label for="edad">Edad:</label>
+    <input type="number" name="edad" id="edad" required>
+    <button type="submit">pulsar</button>
+</form>
+
+
+
+<script>
+function verificarEdad(edad) {
+    if (edad < 18) {
+     throw new error("Debes ser mayor de 18 años");
+    }
+    alert("Acceso permitido.");
+   }
+   
+   document.getElementById('formulario').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita el envío del formulario
+
+      const edad = parseInt(document.getElementById('edad').value);
+      try {
+        verificarEdad(edad);
+      } catch (error) {
+        alert(error.name);    // "Error"
+        alert(error.message); // "Debes ser mayor de 18 años"
+        alert(error.stack); //la pila en la que está el código
+        alert(error); // el error completo "Error. Debes ser mayor de 18 años"
+
+      }
+    });
+
+</script>
+</body>
+</html>
