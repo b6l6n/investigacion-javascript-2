@@ -82,18 +82,26 @@ function manejarProgreso() {
     switch (true) {
         case decision.toLowerCase() === "explorar más":
             alert("Encuentras un pasillo oscuro que lleva a otra habitación.");
+            seguirJugando();
             break;
         case decision.toLowerCase() === "investigar objeto" && habitacionIzquierda === "álbum de fotos":
             alert("Revisas el álbum de fotos con la linterna y encuentras una foto de una llave oculta detrás de un cuadro.");
+            seguirJugando();
             break;
         case decision.toLowerCase() === "investigar objeto" && habitacionIzquierda === "móvil":
             alert("Encuentras un mensaje antiguo en el móvil que dice: 'El secreto está en la habitación izquierda.'");
+            seguirJugando();
             break;
         case decision.toLowerCase() === "salir de la casa":
             alert("Decides abandonar la casa. La oscuridad parece tragárselo todo. Fin del juego.");
+            seguirJugando();
             break;
         default:
             alert("No entiendo tu decisión, inténtalo de nuevo.");
-            manejarProgreso(); // Permite al jugador intentarlo nuevamente
+            seguirJugando(); // Permite al jugador intentarlo nuevamente
     }
+}
+
+function seguirJugando(){
+    alert("Si quieres seguir jugando HAZME UN BIZUM💸💸💸 para que pueda seguir desarrollando esta escape room 💸💸💸");
 }
