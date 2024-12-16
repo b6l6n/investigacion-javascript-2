@@ -6,7 +6,8 @@ if (direccion.toLowerCase() === "izquierda") {
     alert("Has entrado en la habitación principal. Echa un vistazo a tus alrededores.");
     habitacionIzquierda = prompt("Encuentras una mesa con un montón de cosas. ¿Qué objeto quieres coger? (Destornillador, Álbum de Fotos, Móvil, Walkman, Cuchillo, Linterna)");
 } else {
-    alert("Esta puerta está cerrada, inténtalo con la otra.");
+    alert("Intentas abrirla pero está cerrada. Entras en la izquierda.");
+    habitacionIzquierda = prompt("Encuentras una mesa con un montón de cosas. ¿Qué objeto quieres coger? (Destornillador, Álbum de Fotos, Móvil, Walkman, Cuchillo, Linterna)");
 }
 
 if (habitacionIzquierda) {
@@ -46,10 +47,11 @@ function manejarLinterna() {
     let proseguir = prompt("¿Quieres seguir explorando la casa? (Si/No)");
 
     if (proseguir.toLowerCase() === "si") {
-        alert("Sigues caminando por la casa y encuentras una nueva habitación. ¡La aventura continúa!");
-        manejarProgreso(); // Llamamos a la función para decidir la siguiente acción
+        alert("Sigues caminando por la casa y encuentras una nueva habitación");
+        opcionProgreso(); // Llamamos a la función para decidir la siguiente acción
     } else {
-        prompt("Te quedas en la habitación a investigar más. ¿Qué quieres inspeccionar?");
+        prompt("Te quedas en la habitación a investigar más");
+        manejarProgreso();
     }
 }
 
@@ -77,19 +79,19 @@ function objetoMortal() {
 
 // Función para manejar el progreso en la historia
 function manejarProgreso() {
-    let decision = prompt("¿Qué quieres hacer ahora? (Explorar más, Investigar objeto, Salir de la casa)");
+    let decision = prompt("¿Qué quieres hacer ahora? (Explorar más, Investigar objeto(album de fotos, movil), Salir de la casa)");
 
     switch (true) {
-        case decision.toLowerCase() === "explorar más":
+        case decision.toLowerCase() === "explorar mas":
             alert("Encuentras un pasillo oscuro que lleva a otra habitación.");
             seguirJugando();
             break;
-        case decision.toLowerCase() === "investigar objeto" && habitacionIzquierda === "álbum de fotos":
+        case decision.toLowerCase() === "album de fotos":
             alert("Revisas el álbum de fotos con la linterna y encuentras una foto de una llave oculta detrás de un cuadro.");
             seguirJugando();
             break;
-        case decision.toLowerCase() === "investigar objeto" && habitacionIzquierda === "móvil":
-            alert("Encuentras un mensaje antiguo en el móvil que dice: 'El secreto está en la habitación izquierda.'");
+        case decision.toLowerCase() === "movil":
+            alert("Intentas encendr el movil y ahora si responde. Encuentras un mensaje antiguo que dice: 'El secreto está en la habitación izquierda.'");
             seguirJugando();
             break;
         case decision.toLowerCase() === "salir de la casa":
@@ -100,6 +102,30 @@ function manejarProgreso() {
             alert("No entiendo tu decisión, inténtalo de nuevo.");
             seguirJugando(); // Permite al jugador intentarlo nuevamente
     }
+}
+
+
+function opcionProgreso(){
+    let siguienteAccion = prompt("Estás en un pasillo oscuro. Hay una puerta al fondo y otra escalera que baja al sótano. ¿Qué haces? (Abrir puerta, Bajar escalera, Regresar)");
+
+    switch (siguienteAccion.toLowerCase()) {
+        case "abrir puerta":
+            alert("La puerta está cerrada con llave. Parece que necesitas buscar la llave antes de continuar.");
+            seguirJugando(); // Vuelve al flujo anterior para investigar objetos
+            break;
+        case "bajar escalera":
+            alert("Bajas al sótano y escuchas un ruido extraño... Encuentras una caja cerrada.");
+            seguirJugando(); // Nueva función para manejar el evento en el sótano
+            break;
+        case "regresar":
+            alert("Vuelves a la habitación inicial para investigar más objetos.");
+            seguirJugando();
+            break;
+        default:
+            alert("No entiendo lo que intentas hacer. Intenta de nuevo.");
+            seguirJugando(); // Permite repetir la elección
+    }
+
 }
 
 function seguirJugando(){
