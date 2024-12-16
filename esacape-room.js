@@ -131,3 +131,13 @@ function opcionProgreso(){
 function seguirJugando(){
     alert("Si quieres seguir jugando HAZME UN BIZUM💸💸💸 para que pueda seguir desarrollando esta escape room 💸💸💸");
 }
+
+
+
+
+let años = 27;
+
+// Condición (si los años son mayores o iguales a 18)
+if (años >= 18) {
+  console.log("¡Soy mayor de edad!");
+}
